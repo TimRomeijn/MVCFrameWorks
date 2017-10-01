@@ -3,19 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Artist;
 
 class ArtistsController extends Controller
 {
     //
 
-    public function artists()
+    public function index()
     {
+        $artists = Artist::all();
 
-        $name = 'tim';
-        return view('artists')->with([
-            'first' => 'tim',
-            'last' => 'romeijn'
-        ]);
+        return view('artists/index', compact('artists'));
+    }
+
+    public function show($id)
+    {
+        $artist = Artist::find($id);
+
+        return view('artists/show', compact('artist'));
     }
 
 }

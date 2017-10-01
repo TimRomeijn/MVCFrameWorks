@@ -11,10 +11,14 @@
 |
 */
 
-Route::get('/', function () {
+use App\Artist;
+
+Route::get('/', function (){
     return view('welcome');
 });
 
-Route::get('/artists', function () {
-    return view('artists');
-} );
+Route::get('/artists', 'ArtistsController@index');
+
+Route::get('/artists/{artist}', 'ArtistsController@show');
+
+
