@@ -16,9 +16,9 @@ class ArtistsController extends Controller
         return view('artists/index', compact('artists'));
     }
 
-    public function show($id)
+    public function show(Artist $artist) //artist find wildcard
     {
-        $artist = Artist::find($id);
+
 
         return view('artists/show', compact('artist'));
     }

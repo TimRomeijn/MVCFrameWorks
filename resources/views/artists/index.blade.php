@@ -1,26 +1,23 @@
-<!DOCTYPE html>
+@extends('layout')
 
-<html>
 
-<head>
+    @section('content')
 
-    <title>Artists</title>
-</head>
+        <h1>Browse artists:</h1>
 
-<body>
+        <ul>
+            @foreach($artists as $artist)
 
-<h1>Browse artists:</h1>
+                <a href="/artists/{{ $artist->id }}">
 
-<ul>
-    @foreach($artists as $artist)
+                    <li>{{$artist->artistname}}</li>
 
-        <li>{{$artist->artistname}}</li>
+                </a>
 
-        <img src="{{$artist->artistimage}}">
+                <img src="{{$artist->artistimage}}">
 
-    @endforeach
-</ul>
+            @endforeach
+        </ul>
 
-</body>
 
-</html>
+    @endsection

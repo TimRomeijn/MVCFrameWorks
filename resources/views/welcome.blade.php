@@ -1,35 +1,31 @@
-<!DOCTYPE html>
+@extends('layout')
 
-<html>
 
-<head>
+    @section('content')
 
-    <title>Home</title>
-</head>
+        <h1>Welcome to TattooYou</h1>
 
-<body>
+        <a href="/artists/">Artists</a>
 
-    <h1>Welcome to TattooYou</h1>
+        <h2>Popular artists</h2>
 
-    <a href="">Artists</a>
+        <p> Three featured artists </p>
 
-    <h2>Popular artists</h2>
+        {{--loop for high rated artists here--}}
 
-    <p> Three featured artists </p>
+        {{--<ul>--}}
+        {{--@foreach($artists as $artist)--}}
 
-    <ul>
-        @foreach($artists as $artist)
+        {{--<li>{{$artist->artistname}}</li>--}}
 
-            <li>{{$artist->artistname}}</li>
+        {{--<img src="{{$artist->artistimage}}">--}}
 
-            <img src="{{$artist->artistimage}}">
+        {{--@endforeach--}}
+        {{--</ul>--}}
 
-        @endforeach
-    </ul>
 
+    @endsection
 
 
 
-</body>
 
-</html>

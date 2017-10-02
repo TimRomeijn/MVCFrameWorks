@@ -11,7 +11,7 @@
 |
 */
 
-use App\Artist;
+//use App\Artist;
 
 Route::get('/', function (){
     return view('welcome');
