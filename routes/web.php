@@ -11,16 +11,24 @@
 |
 */
 
-//use App\Artist;
+//General Routing
 
 Route::get('/', function (){
     return view('welcome');
 });
 
+//Artists Routing
+Route::get('/artists/addwork', 'ArtistsController@addwork');
+
 Route::get('/artists', 'ArtistsController@index');
 
 Route::get('/artists/{artist}', 'ArtistsController@show');
 
-Route::get('/artists/create', 'ArtistsController@create');
+
+
+
+//Admin Routing
+
+//User Routing
 
 

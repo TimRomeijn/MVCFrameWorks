@@ -23,9 +23,11 @@ class ArtistsController extends Controller
         return view('artists/show', compact('artist'));
     }
 
-    public function create()
+    public function addwork(Artist $artist) //artist adds work to profile
     {
-        return view('artists.creatework');
+
+
+        return view('artists/addwork', compact('artist'));
     }
 
 }
