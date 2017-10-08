@@ -23,4 +23,9 @@ class ArtistsController extends Controller
         return view('artists/show', compact('artist'));
     }
 
+    public function create()
+    {
+        return view('artists.creatework');
+    }
+
 }
