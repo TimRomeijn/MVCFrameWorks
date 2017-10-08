@@ -18,16 +18,23 @@ class ArtistsController extends Controller
 
     public function show(Artist $artist) //artist find wildcard
     {
-
-
         return view('artists/show', compact('artist'));
     }
 
     public function addwork(Artist $artist) //artist adds work to profile
     {
-
-
         return view('artists/addwork', compact('artist'));
+    }
+
+    public function store()
+    {
+        //Create artist data using the request data and save it to the database
+
+        Artist::create(reqeust(['artistimage, artisttext']));
+
+        //And then redirect to artist detail page
+
+        return redirect('artists/show');
     }
 
 }

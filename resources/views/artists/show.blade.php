@@ -9,5 +9,9 @@
 
     <img src="{{$artist->artistimage}}">
 
+    <br></br>
+
+    <p>{{$artist->artisttext}}</p>
+
 
 @endsection

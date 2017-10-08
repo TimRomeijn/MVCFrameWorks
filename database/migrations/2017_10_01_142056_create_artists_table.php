@@ -18,6 +18,8 @@ class CreateArtistsTable extends Migration
             $table->string('artistname');
             $table->string('artistpassword');
             $table->string('artistimage');
+            $table->string('artisttext');
+
             //$table->dateTime();
         });
     }
