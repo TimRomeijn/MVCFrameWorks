@@ -5,7 +5,7 @@
                 <h4 class="text-white">TattooYou</h4>
                 <ul class="list-unstyled">
                     <li><a href="/artists/" class="text-white">Artists</a></li>
-                    <li><a href="#" class="text-white">User</a></li>
+                    <li><a href="/users/" class="text-white">User</a></li>
                     <li><a href="#" class="text-white">Admin</a></li>
                 </ul>
             </div>

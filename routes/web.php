@@ -28,11 +28,10 @@ Route::get('/artists/{artist}', 'ArtistsController@show');
 
 
 
-
-
-
 //Admin Routing
 
 //User Routing
+
+Route::get('/users/', 'UsersController@index');
 
 

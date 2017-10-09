@@ -28,13 +28,14 @@ class ArtistsController extends Controller
 
     public function store()
     {
+
         //Create artist data using the request data and save it to the database
 
-        Artist::create(reqeust(['artistimage, artisttext']));
+        Artist::create(request(['artistimage, artisttext']));
 
-        //And then redirect to artist detail page
+        //And then redirect to artist addwork page
 
-        return redirect('artists/show');
+        return redirect('artists/addwork');
     }
 
 }
