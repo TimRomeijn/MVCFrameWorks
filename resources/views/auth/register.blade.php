@@ -62,10 +62,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="check-role" class="col-md-4 control-label">Select Role</label>
-
-                            <input type="radio" name="optradio" value="1">Normal User
-                            <input type="radio" name="optradio" value="2">Artist
+                            <label for="check-role" class="col-md-4 control-label">Select if artist or not.</label>
+                            <input type="radio" id="role" name="role" value="2">Artist
                         </div>
 
                         <div class="form-group">
