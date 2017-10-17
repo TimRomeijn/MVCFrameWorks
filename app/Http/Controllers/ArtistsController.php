@@ -26,16 +26,6 @@ class ArtistsController extends Controller
         return view('artists/addwork', compact('artist'));
     }
 
-    public function store()
-    {
 
-        //Create artist data using the request data and save it to the database
-
-        Artist::create(request(['artistimage, artisttext']));
-
-        //And then redirect to artist addwork page
-
-        return redirect('artists/addwork');
-    }
 
 }

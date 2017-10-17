@@ -20,7 +20,7 @@ Route::get('/', function (){
 //Artists Routing
 Route::get('/artists/addwork', 'ArtistsController@addwork');
 
-Route::post('/artists/addwork', 'ArtistsController@store');
+Route::post('/artists/addwork', 'WorksController@store');
 
 Route::get('/artists', 'ArtistsController@index');
 

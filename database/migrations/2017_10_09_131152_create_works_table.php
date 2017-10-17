@@ -19,7 +19,7 @@ class CreateWorksTable extends Migration
             $table->integer('style_id')->unsigned();
             $table->foreign('style_id')->references('id')->on('styles');
             $table->string('worktext');
-            //$table->timestamps();
+            $table->timestamps();
         });
     }
 
