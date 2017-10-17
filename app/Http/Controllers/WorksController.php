@@ -8,10 +8,12 @@ use App\Work;
 class WorksController extends Controller
 {
     //
-    public function store() {
+    public function store(request $request) {
         //Create artist data using the request data and save it to the database
 
-        Work::create(request(['workimage, worktext, stylename']));
+        Work::create(['workimage'=> $request->input('workimage'),
+            'worktext'=> $request->input('worktext'),
+            'style_id'=> $request->input('stylename')]);
 
         //And then redirect to artist addwork page
 

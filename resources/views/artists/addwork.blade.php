@@ -31,10 +31,9 @@
         <div class="stylelist">
             <label for="imageInputName"> <b>WorkStyle</b></label>
             <select name="stylename">
-                <option value="Traditional">Traditional</option>
-                <option value="Japanese">Japanese</option>
-                <option value="Realism">Realism</option>
-                <option value="">NewSchool</option>
+                @foreach($styles as $style)
+                    <option>{{ $style->stylename }}</option>
+                @endforeach
             </select>
         </div>
 
