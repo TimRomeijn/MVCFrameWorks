@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h1>Hello wonderful artist!</h1>
+    <h1>Hello artist: {{Auth::user()->name}}!</h1>
 
     <p>Add your work for your artistprofile here!</p>
 

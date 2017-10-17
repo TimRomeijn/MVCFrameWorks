@@ -63,7 +63,8 @@
 
                         <div class="form-group">
                             <label for="check-role" class="col-md-4 control-label">Select if artist or not.</label>
-                            <input type="radio" id="role" name="role" value="2">Artist
+                            <input type="radio" id="role" name="role" value="1" required>Regular User
+                            <input type="radio" id="role" name="role" value="2" required>Artist
                         </div>
 
                         <div class="form-group">

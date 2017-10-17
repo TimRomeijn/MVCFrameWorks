@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <h1>Hello (insert name here)</h1>
+    <h1>Hello {{Auth::user()->name}}</h1>
 
 
 @endsection
