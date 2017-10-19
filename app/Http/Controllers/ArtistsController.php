@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Style;
 use Illuminate\Http\Request;
 use App\Artist;
+use App\Work;
 
 class ArtistsController extends Controller
 {
@@ -26,7 +27,9 @@ class ArtistsController extends Controller
     {
         $styles = Style::all();
 
-        return view('artists/addwork', compact('artist', 'styles'));
+        $works = Work::all();
+
+        return view('artists/addwork', compact('artist', 'styles', 'works'));
     }
 
 

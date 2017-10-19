@@ -10,4 +10,9 @@ class Work extends Eloquent
 
     protected $fillable = ['workimage', 'worktext', 'style_id'];
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }

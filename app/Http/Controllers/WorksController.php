@@ -19,4 +19,9 @@ class WorksController extends Controller
 
         return redirect('artists/addwork');
     }
+
+    public function show(Work $work)
+    {
+        return view('works/show', compact('work'));
+    }
 }

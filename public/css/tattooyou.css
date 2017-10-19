@@ -56,3 +56,11 @@ footer {
 footer p {
     margin-bottom: .25rem;
 }
+
+.artistwork {
+    display: inline;
+}
+.workimage {
+    height: 250px;
+    width: 250px;
+}

@@ -26,7 +26,7 @@ Route::get('/artists', 'ArtistsController@index');
 
 Route::get('/artists/{artist}', 'ArtistsController@show');
 
-
+Route::get('/artists/addwork/{work}', 'WorksController@show');
 
 //Admin Routing
 

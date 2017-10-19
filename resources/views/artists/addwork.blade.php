@@ -6,7 +6,10 @@
 
     <p>Your current work:</p>
 
-    {{--Add work from artist here with loop--}}
+    @foreach($works as $work)
+        @include('partials.work')
+    @endforeach
+
 
     <hr>
 
@@ -32,7 +35,7 @@
             <label for="imageInputName"> <b>WorkStyle</b></label>
             <select name="stylename">
                 @foreach($styles as $style)
-                    <option>{{ $style->stylename }}</option>
+                    <option value="{{ $style->style_id }}">{{ $style->stylename }}</option>
                 @endforeach
             </select>
         </div>
