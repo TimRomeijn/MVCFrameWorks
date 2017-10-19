@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Style;
 use Illuminate\Http\Request;
 use App\Artist;
 
@@ -23,7 +24,9 @@ class ArtistsController extends Controller
 
     public function addwork(Artist $artist) //artist adds work to profile
     {
-        return view('artists/addwork', compact('artist'));
+        $styles = Style::all();
+
+        return view('artists/addwork', compact('artist', 'styles'));
     }
 
 
