@@ -11,12 +11,8 @@ class RatingsController extends Controller
     public function store(Work $work)
     {
 
-        Rating::create([
+        $work->addRating(request('rating'));
 
-           'rating' => request('rating'),
-
-            'work_id' => $work->id
-        ]);
 
         return back();
     }

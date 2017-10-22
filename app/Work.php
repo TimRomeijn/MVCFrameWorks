@@ -20,4 +20,9 @@ class Work extends Eloquent
         return $this->hasMany(Rating::class);
     }
 
+    public function addRating($rating)
+    {
+        $this->ratings()->create(compact('rating'));
+    }
+
 }
