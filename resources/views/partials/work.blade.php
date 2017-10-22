@@ -2,9 +2,8 @@
 
     <img class="workimage" src="{{ $work->workimage }}">
 
-    {{--<a href="works/{{ $work->id }}">--}}
+    <a href="works/{{ $work->id }}">
         <b>{{ $work->worktext }}</b>
-    {{--</a>--}}
-
+    </a>
 
 </div>

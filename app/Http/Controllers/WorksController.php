@@ -22,6 +22,7 @@ class WorksController extends Controller
 
     public function show(Work $work)
     {
+
         return view('works/show', compact('work'));
     }
 }

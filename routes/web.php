@@ -17,7 +17,7 @@ Route::get('/', function (){
     return view('welcome');
 });
 
-//Artists Routing
+//Artists and works Routing
 Route::get('/artists/addwork', 'ArtistsController@addwork');
 
 Route::post('/artists/addwork', 'WorksController@store');
@@ -26,7 +26,9 @@ Route::get('/artists', 'ArtistsController@index');
 
 Route::get('/artists/{artist}', 'ArtistsController@show');
 
-Route::get('/artists/addwork/{work}', 'WorksController@show');
+Route::get('/artists/works/{work}', 'WorksController@show');
+
+Route::post('/works/{work}/ratings', 'RatingsController@store');
 
 //Admin Routing
 
