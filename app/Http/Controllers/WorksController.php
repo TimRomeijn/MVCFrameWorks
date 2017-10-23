@@ -11,9 +11,18 @@ class WorksController extends Controller
     public function store(request $request) {
         //Create artist data using the request data and save it to the database
 
-        Work::create(['workimage'=> $request->input('workimage'),
-            'worktext'=> $request->input('worktext'),
-            'style_id'=> $request->input('stylename')]);
+//        Work::create(['workimage'=> $request->input('workimage'),
+//            'worktext'=> $request->input('worktext'),
+//            'style_id'=> $request->input('stylename')]);
+
+        $work = new Work();
+
+        $work->user_id = auth()->user()->id;
+        $work->workimage = $request->workimage;
+        $work->worktext = $request->worktext;
+        $work->style_id = $request->stylename;
+        $work->save([$work]);
+
 
         //And then redirect to artist addwork page
 

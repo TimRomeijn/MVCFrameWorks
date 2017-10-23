@@ -6,7 +6,7 @@ namespace App;
 
 class Rating extends Model
 {
-    protected $fillable = ['workimage', 'worktext', 'style_id', 'user_id', 'work_id'];
+    protected $fillable = ['workimage', 'rating','worktext', 'style_id', 'user_id', 'work_id'];
 
    public function work()
    {

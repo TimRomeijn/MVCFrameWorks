@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
+use Illuminate\Http\Request;
 
 class Work extends Eloquent
 {
@@ -20,9 +21,9 @@ class Work extends Eloquent
         return $this->hasMany(Rating::class);
     }
 
-    public function addRating($rating)
-    {
-        $this->ratings()->create(compact('rating'));
-    }
+//    public function addRating(Request $request)
+//    {
+//        $this->ratings()->create(['rating'=> $request->input('rating'),'user_id'=> ]);;
+//    }
 
 }

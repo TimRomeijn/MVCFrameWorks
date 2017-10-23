@@ -35,7 +35,7 @@
             <label for="imageInputName"> <b>WorkStyle</b></label>
             <select name="stylename">
                 @foreach($styles as $style)
-                    <option value="{{ $style->style_id }}">{{ $style->stylename }}</option>
+                    <option value="{{ $style->id }}">{{ $style->stylename }}</option>
                 @endforeach
             </select>
         </div>

@@ -49,7 +49,6 @@
                         </select>
 
                     </div>
-
                     <div class="formgroup">
 
                         <button type="submit" class="btn btn-primary">Rate</button>
