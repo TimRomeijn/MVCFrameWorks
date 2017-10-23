@@ -5,19 +5,20 @@
 
         <h1>Browse artists:</h1>
 
-        <ul>
+
+        <div class="artist-list">
             @foreach($artists as $artist)
 
                 <a href="/artists/{{ $artist->id }}">
 
-                    <li>{{$artist->artistname}}</li>
+                    <p>{{$artist->name}}</p>
 
                 </a>
 
-                <img src="{{$artist->artistimage}}">
-
             @endforeach
-        </ul>
+        </div>
+
+
 
 
     @endsection

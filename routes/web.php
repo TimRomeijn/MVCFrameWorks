@@ -10,12 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Work;
 
 //General Routing
 
-Route::get('/', function (){
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@index');
+
 
 //Artists and works Routing
 Route::get('/artists/addwork', 'ArtistsController@addwork');

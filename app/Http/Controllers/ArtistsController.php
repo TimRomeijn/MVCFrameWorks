@@ -6,6 +6,8 @@ use App\Style;
 use Illuminate\Http\Request;
 use App\Artist;
 use App\Work;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ArtistsController extends Controller
 {
@@ -13,7 +15,7 @@ class ArtistsController extends Controller
 
     public function index()
     {
-        $artists = Artist::all();
+        $artists = Auth::user()->all()->where('role', '=', 2);
 
         return view('artists/index', compact('artists'));
     }
