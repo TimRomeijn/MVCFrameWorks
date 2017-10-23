@@ -3,6 +3,7 @@
 
 @section('content')
 
+    {{dd('hello world')}}
     <h1>Detail Artist:</h1>
 
     <h2>{{$artist->artistname}}</h2>

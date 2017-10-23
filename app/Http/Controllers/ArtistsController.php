@@ -29,7 +29,7 @@ class ArtistsController extends Controller
     {
         $styles = Style::all();
 
-        $works = Work::all();
+        $works = Work::all()->where('user_id', '=', Auth::user()->id);
 
         return view('artists/addwork', compact('artist', 'styles', 'works'));
     }
