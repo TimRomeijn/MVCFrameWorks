@@ -1,12 +1,18 @@
+@php
+    use App\Style;
+
+    $styles = Style::all();
+@endphp
+
 <div class="collapse bg-dark" id="navbarHeader">
     <div class="container">
         <div class="row">
             <div class="col-sm-4 py-4">
-                <h4 class="text-white">TattooYou</h4>
+                <h4 class="text-white">TattooStyles</h4>
                 <ul class="list-unstyled">
-                    <li><a href="/artists/" class="text-white">Artists</a></li>
-                    <li><a href="/users/" class="text-white">User</a></li>
-                    <li><a href="#" class="text-white">Admin</a></li>
+                    @foreach($styles as $style)
+                        <li><a href="/styles/{{ $style->id }}" class="text-white">{{ $style->stylename }}</a></li>
+                    @endforeach
                 </ul>
             </div>
         </div>

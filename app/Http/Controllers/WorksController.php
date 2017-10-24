@@ -11,10 +11,6 @@ class WorksController extends Controller
     public function store(request $request) {
         //Create artist data using the request data and save it to the database
 
-//        Work::create(['workimage'=> $request->input('workimage'),
-//            'worktext'=> $request->input('worktext'),
-//            'style_id'=> $request->input('stylename')]);
-
         $work = new Work();
 
         $work->user_id = auth()->user()->id;
@@ -31,7 +27,6 @@ class WorksController extends Controller
 
     public function show(Work $work)
     {
-
         return view('works/show', compact('work'));
     }
 }

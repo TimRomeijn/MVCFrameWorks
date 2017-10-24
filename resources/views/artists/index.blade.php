@@ -7,15 +7,19 @@
 
 
         <div class="artist-list">
+            <ul>
+
+
             @foreach($artists as $artist)
 
                 <a href="/artists/{{ $artist->id }}">
 
-                    <p>{{$artist->name}}</p>
+                    <li>{{$artist->name}}</li>
 
                 </a>
 
             @endforeach
+            </ul>
         </div>
 
 

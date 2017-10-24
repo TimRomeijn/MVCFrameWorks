@@ -3,16 +3,17 @@
 
 @section('content')
 
-    {{dd('hello world')}}
-    <h1>Detail Artist:</h1>
+    <div class="col-sm-8">
+        <h1>Details Artist:</h1>
 
-    <h2>{{$artist->artistname}}</h2>
+        <h2>{{ $artist->name }}</h2>
 
-    <img src="{{$artist->artistimage}}">
+        @foreach($works as $work)
+            @include('partials.work')
+        @endforeach
 
-    <br></br>
+    </div>
 
-    <p>{{$artist->artisttext}}</p>
 
 
 @endsection

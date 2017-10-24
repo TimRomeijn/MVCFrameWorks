@@ -24,11 +24,17 @@ Route::post('/artists/addwork', 'WorksController@store');
 
 Route::get('/artists', 'ArtistsController@index');
 
-Route::get('/artists/{artist}', 'ArtistsController@show');
+Route::get('/artists/{id}', 'ArtistsController@show');
+
+Route::get('/works/{work}', 'WorksController@show');
 
 Route::get('/artists/works/{work}', 'WorksController@show');
 
 Route::post('/works/{work}/ratings', 'RatingsController@store');
+
+//Styles routing
+
+Route::get('/styles/{id}','StylesController@show');
 
 //Admin Routing
 
