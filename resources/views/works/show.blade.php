@@ -39,7 +39,6 @@
                     {{ csrf_field() }}
 
                     <div class="formgroup">
-
                         <select name="rating">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -47,12 +46,10 @@
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-
                     </div>
+
                     <div class="formgroup">
-
                         <button type="submit" class="btn btn-primary">Rate</button>
-
                     </div>
 
                 </form>

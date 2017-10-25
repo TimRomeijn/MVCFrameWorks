@@ -16,6 +16,10 @@ use App\Work;
 
 Route::get('/', 'WelcomeController@index');
 
+Route::get('/search', 'SearchController@index');
+
+Route::post('/search', 'SearchController@show');
+
 
 //Artists and works Routing
 Route::get('/artists/addwork', 'ArtistsController@addwork');

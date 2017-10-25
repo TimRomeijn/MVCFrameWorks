@@ -5,7 +5,7 @@
 
         <h2>Popular artists</h2>
 
-        <p> Three featured works </p>
+        <p> Highest rated work(s) </p>
 
         {{--loop for high rated artists here--}}
 

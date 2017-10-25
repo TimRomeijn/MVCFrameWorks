@@ -21,9 +21,11 @@ class Work extends Eloquent
         return $this->hasMany(Rating::class);
     }
 
-//    public function addRating(Request $request)
-//    {
-//        $this->ratings()->create(['rating'=> $request->input('rating'),'user_id'=> ]);;
-//    }
+    public function scopeSearch($query, $search)
+    {
+        return $query->where('worktext', 'like', '%' .$search. '%');
+    }
+
+
 
 }

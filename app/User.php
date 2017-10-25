@@ -40,4 +40,9 @@ class User extends Model implements AuthenticatableContract,
         return $this->hasMany(Work::class);
     }
 
+    public function scopeSearch($query, $search)
+    {
+        return $query->where('name', 'like', '%' .$search. '%');
+    }
+
 }
