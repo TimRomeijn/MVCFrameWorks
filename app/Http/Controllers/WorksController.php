@@ -11,6 +11,11 @@ class WorksController extends Controller
     public function store(request $request) {
         //Create artist data using the request data and save it to the database
 
+        $this->validate(request(),[
+            'workimage' => 'required',
+            'worktext' => 'required'
+        ]);
+
         $work = new Work();
 
         $work->user_id = auth()->user()->id;

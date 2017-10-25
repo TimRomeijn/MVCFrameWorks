@@ -23,12 +23,12 @@
 
         <div class="form-group">
             <label for="imageInputName"><b>WorkImageURL</b></label>
-            <input type="text" class="form-control" id="imageInputName" placeholder="ImageURL here" name="workimage" required>
+            <input type="text" class="form-control" id="imageInputName" placeholder="ImageURL here" name="workimage" >
         </div>
 
         <div class="form-group">
             <label for="imageInputName"><b>WorkImagetext</b></label>
-            <input type="text" class="form-control" id="imageInputName" placeholder="Info about image here..." name="worktext" required>
+            <input type="text" class="form-control" id="imageInputName" placeholder="Info about image here..." name="worktext" >
         </div>
 
         <div class="stylelist">
@@ -40,7 +40,11 @@
             </select>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+
+        @include('partials.errors')
 
     </form>
 

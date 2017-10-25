@@ -36,6 +36,8 @@ Route::post('/works/{work}/ratings', 'RatingsController@store');
 
 Route::get('/styles/{id}','StylesController@show');
 
+Route::get('/styles/works/{work}','WorksController@show');
+
 //Admin Routing
 
 //User Routing
