@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Rating;
 use App\Style;
 use App\User;
 use Illuminate\Http\Request;

@@ -36,13 +36,21 @@ Route::get('/artists/works/{work}', 'WorksController@show');
 
 Route::post('/works/{work}/ratings', 'RatingsController@store');
 
+
+
 //Styles routing
 
 Route::get('/styles/{id}','StylesController@show');
 
 Route::get('/styles/works/{work}','WorksController@show');
 
+
+
 //Admin Routing
+
+Route::get('/admin', 'AdminController@index');
+
+
 
 //User Routing
 

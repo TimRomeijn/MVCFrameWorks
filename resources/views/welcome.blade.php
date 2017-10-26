@@ -3,11 +3,9 @@
 
     @section('content')
 
-        <h2>Popular artists</h2>
+        <h2>New Work</h2>
 
-        <p> Highest rated work(s) </p>
-
-        {{--loop for high rated artists here--}}
+        <p> The latest works by our artists </p>
 
         @foreach($works as $work)
             @include('partials.work')

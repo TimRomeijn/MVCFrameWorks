@@ -10,8 +10,6 @@ class RatingsController extends Controller
 {
     public function store(Request $request, Work $work)
     {
-
-        //Rating::create(['rating'=> $request->input('rating'),]);
         $rating = new Rating();
         $rating->user_id = auth()->user()->id;
         $rating->rating = $request->rating;
