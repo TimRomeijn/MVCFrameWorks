@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class RatingsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function store(Request $request, Work $work)
     {
         $rating = new Rating();

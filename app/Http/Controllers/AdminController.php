@@ -12,6 +12,11 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $users = User::all();
@@ -37,7 +42,7 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -69,9 +74,20 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $id = $request->input('user_id');
+        $user = User::find($id);
+        if($user->role == 1)
+        {
+            $user->role = 2;
+        }elseif ($user->role == 2)
+        {
+            $user->role = 1;
+        }
+        $user->save();
+
+        return redirect('/admin');
     }
 
     /**

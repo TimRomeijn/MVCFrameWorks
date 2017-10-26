@@ -19,7 +19,7 @@ class SearchController extends Controller
         $search = $request->input('searchfield');
 
         $workSearches = Work::search($search)->get();
-        $userSearches = User::search($search)->get()->where('role', '=', 2);
+        $userSearches = User::search($search)->get()->where('role', '>=', 2);
 
 
         return view('search/index', compact('workSearches', 'userSearches'));

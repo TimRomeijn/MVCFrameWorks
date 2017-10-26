@@ -47,8 +47,18 @@ Route::get('/styles/works/{work}','WorksController@show');
 
 
 //Admin Routing
+Route::group(['middleware'=> 'App\Http\Middleware\AdminMiddleware'],function(){
+    Route::get('/admin', 'AdminController@index');
 
-Route::get('/admin', 'AdminController@index');
+    Route::post('/admin', 'AdminController@update');
+});
+
+Route::get('/denied', function(){
+    return view('partials.permissiondenied');
+});
+
+
+
 
 
 

@@ -16,19 +16,18 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Role</th>
-                        <th>Change to User</th>
-                        <th>Change to Artist</th>
+                        <th>Change Role</th>
                     </tr>
                 @foreach($users as $user)
                     <tr>
-                        <form action="/admin" method="post">
+                        <form action="/admin" role="form" method="post">
                             {{ csrf_field() }}
                             <td>{{ $user->id }}</td>
+                            <input type="hidden" name="user_id" value="{{ $user->id }}">
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->role }}</td>
-                            <td><input type="checkbox" name="user_role" {{ $user->where('role', '=', 1) ? 'checked' : ''}}></td>
-                            <td><input type="checkbox" name="artist_role" {{ $user->where('role', '=', 2) ? 'checked' : ''}}></td>
+                            <td><input type="checkbox"  data-toggle="toggle" name="user_role"></td>
                             <td><button type="submit" class="btn btn-primary">Submit Change</button></td>
                         </form>
                     </tr>
