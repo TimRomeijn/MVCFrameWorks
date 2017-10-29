@@ -36,7 +36,8 @@ class LoginController extends Controller
 
         if(  Auth::user()->role   == '1'){
             return '/';
-        }else{
+        }else
+        {
             return '/artists/addwork';
         }
     }

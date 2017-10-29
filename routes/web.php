@@ -22,9 +22,11 @@ Route::post('/search', 'SearchController@show');
 
 
 //Artists and works Routing
-Route::get('/artists/addwork', 'ArtistsController@addwork');
+Route::group(['middleware'=> 'App\Http\Middleware\ArtistMiddleware'],function() {
+    Route::get('/artists/addwork', 'ArtistsController@addwork');
 
-Route::post('/artists/addwork', 'WorksController@store');
+    Route::post('/artists/addwork', 'WorksController@store');
+});
 
 Route::get('/artists', 'ArtistsController@index');
 
