@@ -14,6 +14,7 @@ class SearchController extends Controller
         return view('search/index');
     }
 
+    // Method for requesting the input from the searchfield
     public function show(Request $request)
     {
         $search = $request->input('searchfield');

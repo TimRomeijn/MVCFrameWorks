@@ -13,6 +13,8 @@ class AdminMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
+
+    //Deny permission if the user doesnt have the admin role
     public function handle($request, Closure $next)
     {
         if($request->user()->role < 3)

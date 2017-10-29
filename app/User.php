@@ -35,11 +35,13 @@ class User extends Model implements AuthenticatableContract,
      */
     protected $hidden = ['password', 'remember_token'];
 
+    //User can have many works
     public function works()
     {
         return $this->hasMany(Work::class);
     }
 
+    //Can be searched on names from users
     public function scopeSearch($query, $search)
     {
         return $query->where('name', 'like', '%' .$search. '%');

@@ -12,11 +12,14 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //Middleware so only admin can access admin page
     public function __construct()
     {
         $this->middleware('auth');
     }
 
+    //Return all the users to the admin page
     public function index()
     {
         $users = User::all();
@@ -74,6 +77,8 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    //Change the role from artist to regular user and the other way around
     public function update(Request $request)
     {
         $id = $request->input('user_id');

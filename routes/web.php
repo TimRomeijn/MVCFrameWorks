@@ -22,6 +22,8 @@ Route::post('/search', 'SearchController@show');
 
 
 //Artists and works Routing
+
+//Middleware so only artists can access addwork
 Route::group(['middleware'=> 'App\Http\Middleware\ArtistMiddleware'],function() {
     Route::get('/artists/addwork', 'ArtistsController@addwork');
 
@@ -49,6 +51,8 @@ Route::get('/styles/works/{work}','WorksController@show');
 
 
 //Admin Routing
+
+//Middleware so only artists can access addwork
 Route::group(['middleware'=> 'App\Http\Middleware\AdminMiddleware'],function(){
     Route::get('/admin', 'AdminController@index');
 

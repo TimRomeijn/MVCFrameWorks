@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Work;
+use Illuminate\Support\Facades\Auth;
 
 class WorksController extends Controller
 {
-    //
+    //Method where the works are stored in the database
     public function store(request $request) {
-        //Create artist data using the request data and save it to the database
 
+        //Form-validation for these fields
         $this->validate(request(),[
             'workimage' => 'required',
             'worktext' => 'required'
@@ -30,8 +31,10 @@ class WorksController extends Controller
         return redirect('artists/addwork');
     }
 
+    // Detail page for the specific work
     public function show(Work $work)
     {
+
         return view('works/show', compact('work'));
     }
 }

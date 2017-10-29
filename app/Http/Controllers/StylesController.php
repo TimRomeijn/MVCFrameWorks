@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class StylesController extends Controller
 {
+    // The page where the works that belong to a certain style will be shown
     public function show($id)
     {
         $styles = Style::all();

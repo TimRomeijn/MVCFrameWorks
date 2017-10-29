@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class WelcomeController extends Controller
 {
+    //Home page where all the latest works will be shown
     public function index()
     {
         $works = DB::table('works')->latest()->get();

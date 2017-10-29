@@ -13,6 +13,7 @@ class ArtistMiddleware
      * @param  \Closure  $next
      * @return mixed
      */
+    //Deny permission if the user doesn't have the artist/admin role
     public function handle($request, Closure $next)
     {
         if($request->user()->role < 2)

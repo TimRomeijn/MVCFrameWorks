@@ -29,7 +29,7 @@
 
         <hr>
         {{--Add a rating--}}
-        
+
 
         <div class="card">
 
