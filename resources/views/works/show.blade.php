@@ -29,6 +29,7 @@
 
         <hr>
         {{--Add a rating--}}
+        
 
         <div class="card">
 
@@ -47,6 +48,7 @@
                             <option value="5">5</option>
                         </select>
                     </div>
+
 
                     <div class="formgroup">
                         <button type="submit" class="btn btn-primary">Rate</button>

@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\DB;
 
 class ArtistsController extends Controller
 {
-    //
+    public function __construct()
+    {
+        $this->middleware('auth',['only' =>['addwork']]);
+    }
 
     public function index()
     {

@@ -15,10 +15,15 @@ class RatingsController extends Controller
 
     public function store(Request $request, Work $work)
     {
-        $rating = new Rating();
-        $rating->user_id = auth()->user()->id;
-        $rating->rating = $request->rating;
-        $work->ratings()->save($rating);
+        if(auth()->user()->logincount >1){
+            $rating = new Rating();
+            $rating->user_id = auth()->user()->id;
+            $rating->rating = $request->rating;
+            $work->ratings()->save($rating);
+        }else{
+            return redirect('/');
+        }
+
 
         return back();
     }
